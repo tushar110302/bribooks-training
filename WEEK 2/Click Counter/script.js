@@ -7,6 +7,9 @@ incr.addEventListener('click', () =>{
     num.textContent++;
 })
 decr.addEventListener('click', () => {
+    if(num.textContent == 0){
+        return;
+    }
     num.textContent--;
 })
 reset.addEventListener('click', () => {
