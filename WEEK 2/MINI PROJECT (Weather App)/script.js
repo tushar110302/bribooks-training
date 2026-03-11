@@ -5,6 +5,15 @@ const weatherResult = document.getElementById("weatherResult");
 
 searchBtn.addEventListener("click", getWeather);
 
+function showLoader() {
+  weatherResult.innerHTML = `
+    <div class="loader-container">
+      <div class="loader"></div>
+      <p class="loader-text">Fetching weather...</p>
+    </div>
+  `;
+}
+
 async function getWeather() {
   const city = cityInput.value.trim();
 
@@ -14,7 +23,9 @@ async function getWeather() {
   }
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+
   try {
+    showLoader();
     const response = await fetch(url);
     const data = await response.json();
 
