@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f9fafb;
+  overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  /* background-color: #101828; */
+  /* border: 1px solid #002c83; */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  /* padding: 2rem 4rem; */
+  /* border: 1px solid #002c83; */
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-list li {
+  color: #4a5565;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  /* padding: 1rem 4rem; */
+  gap: 4rem;
+}
+.hero-section-text {
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 1.5rem;
+}
+.hero-section-text h1 {
+  color: #101828;
+  font-weight: 700;
+  font-style: bold;
+  font-size: 60px;
+  line-height: 75px;
+}
+.hero-section-text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32.5px;
+  color: #4a5565;
+  margin-right: 100px;
+}
+.hero-section-image {
+  max-width: 50%;
+  display: flex;
+  justify-content: right;
+  /* align-items: center; */
+  /* aspect-ratio: 1; */
+}
+
+.hero-section-text-data {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  margin-top: 2rem;
+  margin-right: 50px;
+}
+
+.hg-text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 4px;
+}
+
+.platforms-section,
+.bribooks-section {
+  /* width: 1056px; */
+  margin: 0 auto;
+  margin-top: 6rem;
+  /* text-align: center; */
+}
+.platforms-section h2 {
+  color: #101828;
+  /* font-family: Arimo; */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  margin-bottom: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+.platforms-section p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #4a5565;
+  text-align: center;
+  max-width: 756px;
+  margin: auto;
+}
+
+.bribooks-section {
+  background-color: #fff;
+  display: flex;
+  gap: 4rem;
+  border-top: 0.8px solid #e5e7eb;
+  box-shadow: 0px 1px 2px -1px #0000001a;
+  box-shadow: 0px 1px 3px 0px #0000001a;
+  border-radius: 10px;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+}
+
+.bribooks-section-text {
+  max-width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* justify-content: center; */
+  align-items: flex-start;
+}
+.bribooks-section-text h2 {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 30px;
+  line-height: 36px;
+  color: #101828;
+}
+.bribooks-section-text p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29.25px;
+  color: #4a5565;
+}
+.bribooks-section-text span {
+  background-color: #eff6ff;
+  color: #1447e6;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.bribooks-section-text a {
+  font-weight: 700;
+  font-style: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #155dfc;
+}
+.bribooks-section-text ul {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  list-style: none;
+}
+.bribooks-section-text ul li {
+  display: flex;
+  gap: 1rem;
+}
+.bribooks-section-image {
+  max-width: 50%;
+  margin: auto;
+}
+.bripublish-section {
+  flex-direction: row-reverse;
+}
+.span {
+  color: #432dd7;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.mission-section-p {
+  font-size: 18px;
+  line-height: 29.25px;
+}
+.footer {
+  background-color: #10284b;
+  margin-top: 6rem;
+}
+.footer-contact {
+  padding-top: 3rem;
+  /* margin-bottom: 0.7rem; */
+  color: #8ec5ff;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+.footer-office {
+  color: #d1d5dc;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+  flex-wrap: wrap;
+  /* margin-bottom: 4rem; */
+}
+.card {
+  width: 309.32501220703125px;
+  height: 180.60000610351562px;
+  margin-top: 1rem;
+  border: 1px solid #f6f2f21a;
+  padding: 1.5rem 3rem;
+  border-radius: 10px;
+  background-color: #ffffff0d;
+}
+.card-location {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  color: #d1d5dc;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22.75px;
+}
+.card-location p {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    gap: 2rem;
+  }
+
+  .hero-section-text {
+    max-width: 45%;
+  }
+
+  .hero-section-image {
+    max-width: 45%;
+  }
+
+  .hero-section-text h1 {
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  .hero-section-text p {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .bribooks-section {
+    gap: 2rem;
+  }
+
+  .bribooks-section-text {
+    max-width: 45%;
+  }
+
+  .bribooks-section-image {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-section-text {
+    max-width: 100%;
+    /* align-items: center; */
+  }
+
+  .hero-section-image {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .hero-section-text-data {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .hero-section-text h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .bribooks-section {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .bripublish-section {
+    flex-direction: column;
+  }
+
+  .bribooks-section-text {
+    max-width: 100%;
+  }
+
+  .bribooks-section-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-list {
+    gap: 1.5rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+    font-size: 14px;
+  }
+
+  .hero-section-text h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero-section-text p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .hg-text {
+    font-size: 24px;
+  }
+
+  .platforms-section h2 {
+    font-size: 28px;
+  }
+
+  .platforms-section p {
+    font-size: 16px;
+  }
+
+  .bribooks-section {
+    padding: 1.5rem;
+  }
+
+  .bribooks-section-text h2 {
+    font-size: 24px;
+  }
+
+  .bribooks-section-text p {
+    font-size: 16px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}

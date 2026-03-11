@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Login</title>
   </head>
   <body>
-      <form action="page2.html">
-          <h1>Login</h1>
+    <form novalidate>
+      <h1>Login</h1>
       <label for="phone">Enter Your Mobile Number</label>
-      <input id="phone" type="tel" required placeholder="123456789" pattern="[0-9]{4,12}"/>
+      <input id="phone" type="number" required placeholder="123456789" />
+      <span class="error"></span>
 
       <button type="submit">Login</button>
     </form>
+
+    <script src="script.js"></script>
   </body>
 </html>

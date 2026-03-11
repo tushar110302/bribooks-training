@@ -1,62 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Contact Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <fieldset>
-        <div>
-            <h1>Get in Touch</h1>
-        </div>
-        <form>
+      <div>
+        <h1>Get in Touch</h1>
+      </div>
+      <form novalidate>
+        <label for="name">Name <sup>*</sup> </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          required
+        />
+        <span class="name-error error"></span>
 
-            <label for="name">Name <sup>*</sup> </label>
-            <input 
-            type="text"
-            id="name"
-            name="name"
-            placeholder="John Doe"
-            required
-            />
-            <span class="name-error error"></span>
+        <label for="email">Email <sup>*</sup> </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="jdoe@example.com"
+          required
+        />
+        <span class="email-error error"></span>
 
-            <label for="email">Email <sup>*</sup> </label>
-            <input 
-            type="email"
-            id="email"
-            name="email"
-            placeholder="jdoe@example.com"
-            required
-            />
-            <span class="email-error error"></span>
+        <label for="phone">Phone <sup>*</sup> </label>
+        <input
+          type="number"
+          id="phone"
+          name="phone"
+          placeholder="123-3567890"
+          required
+        />
+        <span class="phone-error error"></span>
 
-            <label for="phone">Phone <sup>*</sup> </label>
-            <input 
-            type="number"
-            id="phone"
-            name="phone"
-            placeholder="123-3567890"
-            required
-            />
-            <span class="phone-error error"></span>
+        <label for="message">Message <sup>*</sup> </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Enter your message"
+          required
+        ></textarea>
+        <span class="message-error error"></span>
 
-            <label for="message">Message <sup>*</sup> </label>
-            <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Enter your message"
-            required
-            ></textarea>
-            <span class="message-error error"></span>
-            
-            <button type="submit">Submit</button>
-
-        </form>
+        <button type="submit">Submit</button>
+      </form>
     </fieldset>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

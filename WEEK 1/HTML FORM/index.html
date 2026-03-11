@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Contact Form</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
         <div>
             <h1>Get in Touch</h1>
         </div>
-        <form>
+        <form novalidate>
 
             <label for="name">Name</label>
             <input 
@@ -19,9 +19,11 @@
             id="name"
             name="name"
             placeholder="John Doe"
-            pattern="^[A-Za-z\s]{3,20}$"
+            minlength="3"
+            maxlength="30"
             required
             />
+            <span class="name-error error"></span>
 
             <label for="email">Email</label>
             <input 
@@ -31,14 +33,16 @@
             placeholder="jdoe@example.com"
             required
             />
+            <span class="email-error error"></span>
 
             <label for="phone">Phone</label>
             <input 
-            type="text"
+            type="number"
             id="phone"
             name="phone"
             placeholder="123-3567890"
             />
+            <span class="phone-error error"></span>
 
             <label for="message">Message</label>
             <textarea
@@ -50,11 +54,13 @@
             maxlength="256"
             required
             ></textarea>
+            <span class="message-error error"></span>
             
             <button type="submit">Submit</button>
 
         </form>
     </fieldset>
 
+    <script src="script.js"></script>
 </body>
 </html>
