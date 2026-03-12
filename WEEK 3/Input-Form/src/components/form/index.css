@@ -1,0 +1,113 @@
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background: white;
+  padding: 30px 35px;
+  width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4f9cff;
+  box-shadow: 0 0 4px rgba(79, 156, 255, 0.4);
+}
+
+textarea {
+  resize: none;
+  min-height: 80px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.checkbox-label {
+  margin-bottom: 8px;
+}
+.checkbox-container {
+  display: flex;
+  gap: 20px;
+}
+.radio-group {
+  margin: 15px 0;
+}
+.radio-container {
+  display: flex;
+  gap: 30px;
+}
+.radio-group p {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.radio-container div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #4f9cff;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background: #3b82f6;
+}
+.error {
+  color: #e63946;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+@media (max-width: 400px) {
+  .form {
+    width: 90%;
+    padding: 25px;
+  }
+}
