@@ -18,11 +18,21 @@ const Form = () => {
   const changeHandler = (e) => {
     const { name, value, type, checked } = e.target;
 
+    if (name === "first_name" || name === "last_name") {
+      if (!/^[A-Za-z\s]*$/.test(value)) return;
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: type === "checkbox" ? checked : value,
     }));
-  }
+
+    setErrors((prev) => ({
+      ...prev,
+      [name]: "",
+    }));
+  };
+  
   const validateForm = () => {
     const newErrors = {};
     if (!formData.first_name.trim()) {
@@ -73,8 +83,9 @@ const Form = () => {
     }
 
     return newErrors;
-  }
-  const submitHandler =(e) => {
+  };
+
+  const submitHandler = (e) => {
     e.preventDefault();
 
     const validationErrors = validateForm();
@@ -87,7 +98,7 @@ const Form = () => {
     setErrors({});
     alert("Form submitted successfully!");
     console.log(formData);
-  }
+  };
 
   return (
     <div className="form-container">
@@ -223,6 +234,6 @@ const Form = () => {
       </form>
     </div>
   );
-}
+};
 
 export default Form;
