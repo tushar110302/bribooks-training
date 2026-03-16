@@ -1,0 +1,45 @@
+.user-card {
+  max-width: 520px;
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+}
+.card-body p,
+strong {
+  color: #8b949e;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #30363d;
+  padding: 3px;
+  background: #0d1117;
+}
+
+.repo-title {
+  color: #58a6ff;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* .repo-list {
+  background: transparent !important;
+} */
+
+.repo-item {
+  background: #0d1117 !important;
+  border: 1px solid #30363d !important;
+  margin-bottom: 6px !important;
+  border-radius: 6px !important;
+}
+
+.repo-link {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
