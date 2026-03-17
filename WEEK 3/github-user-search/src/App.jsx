@@ -1,13 +1,64 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SearchBar from "./components/searchBar/SearchBar";
 import UserCard from "./components/userCard/UserCard";
 import Loader from "./components/loader/Loader";
+import { IoSunny } from "react-icons/io5";
+import { IoMoonSharp } from "react-icons/io5";
 
 function App() {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [repos, setRepos] = useState([]);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+      return savedTheme === "dark";
+    }
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const applyTheme = (dark) => {
+      if (dark) {
+        document.body.classList.add("dark");
+      } else {
+        document.body.classList.remove("dark");
+      }
+    };
+
+    applyTheme(darkMode);
+
+    const handleChange = (e) => {
+      if (!localStorage.getItem("theme")) {
+        setDarkMode(e.matches);
+        applyTheme(e.matches);
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleChange);
+    };
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    const newTheme = !darkMode;
+
+    setDarkMode(newTheme);
+
+    if (newTheme) {
+      document.body.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  };
 
   const fetchUser = async (username) => {
     try {
@@ -40,6 +91,20 @@ function App() {
 
   return (
     <div className="container text-center py-5">
+      <div className="d-flex justify-content-end align-items-center mb-4">
+        <input
+          type="checkbox"
+          className="checkbox"
+          id="checkbox"
+          checked={darkMode}
+          onChange={toggleTheme}
+        />
+        <label htmlFor="checkbox" className="checkbox-label">
+          <IoMoonSharp className="fa-moon" />
+          <IoSunny className="fa-sun" />
+          <span className="ball"></span>
+        </label>
+      </div>
       <h1 className="mb-4 fw-semibold">GitHub User Search</h1>
 
       <SearchBar onSearch={fetchUser} />

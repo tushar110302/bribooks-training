@@ -10,7 +10,7 @@ const UserCard = ({ user, repos }) => {
           className="rounded-circle mb-3 avatar"
         />
 
-        <h3 className="text-white fw-bold">{user.name}</h3>
+        <h3 className="fw-bold">{user.name}</h3>
         <p>{user.bio || "No bio available"}</p>
 
         <div className="row mt-3">

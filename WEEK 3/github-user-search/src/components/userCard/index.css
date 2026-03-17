@@ -1,8 +1,12 @@
 .user-card {
   max-width: 520px;
-  background-color: #161b22 !important;
+  background: var(--bg) !important;
   border: 1px solid #30363d !important;
   box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+  transition: background 0.3s ease;
+}
+h3 {
+  color: var(--text) !important;
 }
 .card-body p,
 strong {
@@ -23,15 +27,12 @@ strong {
   margin-bottom: 10px;
 }
 
-/* .repo-list {
-  background: transparent !important;
-} */
-
 .repo-item {
-  background: #0d1117 !important;
+  background: var(--bg) !important;
   border: 1px solid #30363d !important;
   margin-bottom: 6px !important;
   border-radius: 6px !important;
+  transition: background 0.3s ease;
 }
 
 .repo-link {
